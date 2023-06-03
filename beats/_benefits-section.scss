@@ -1,0 +1,17 @@
+.benefits-section {
+  position: relative;
+
+  &::before {
+    content: url("./images/triangle.png");
+    position: absolute;
+    bottom: -16px;
+    left: 100px;
+  }
+
+  &:after {
+    content: url("./images/Rectangle.png");
+    position: absolute;
+    right: 150px;
+    top: -22px;
+  }
+}

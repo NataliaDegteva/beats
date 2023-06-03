@@ -1,0 +1,33 @@
+.preview {
+  background: url(./images/main.png) left 78% center no-repeat;
+  background-color:  #F5F5F5;
+  height: 100vh;
+  min-height: 650px;
+  padding: 24px 0 70px;
+}
+
+.preview__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.preview__main-title {
+  font-family: $play;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.preview__title-desc {
+  font-family: $play;
+  font-style: 21px;
+  margin-bottom: 36px;
+  padding-right: 25%;
+}
+
+.preview__title-section {
+  width: 31%;
+}

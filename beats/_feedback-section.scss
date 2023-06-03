@@ -1,0 +1,10 @@
+.feedback-section {
+  position: relative;
+
+  &::before {
+    content: url("./images/circle.png");
+    position: absolute;
+    bottom: -22px;
+    left: 130px;
+  }
+}

@@ -1,0 +1,53 @@
+$containerWidth: 940px;
+$baseFontSize: 16px;
+$play: 'Play', Arial, Helvetica, sans-serif;
+$alegreya: 'Alegreya Sans', 'Play', Arial, Helvetica, sans-serif;
+
+//colors 
+$gray: #666666;
+$red: #E01F3D;
+$black: #292929;
+
+//normalize 
+
+@import  "./normalize.css";
+
+//fonts 
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap");
+
+@import "./base";
+
+@import "./preview";
+
+@import "./header";
+
+@import "./features";
+
+@import "./feature";
+
+@import "./button";
+
+@import "./section";
+
+@import "./headline";
+
+@import "./benefits";
+
+@import "./benefit";
+
+@import "./benefits-section";
+
+@import "./feedback";
+
+@import "./interactive-avatar";
+
+@import "./feedback-section";
+
+@import "./delivery-section";
+
+@import "./form";
+
+@import "./radio";
+
+@import "./fixed-menu";

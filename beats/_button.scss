@@ -1,0 +1,32 @@
+.button {
+  font-style: 16px;
+  color: #fff;
+  padding: 18px 41px;
+  border-radius: 100px;
+  line-height: 1;
+  cursor: pointer;
+
+  &--dark {
+    background: $red;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+      background: #CA1B36;
+    }
+    }
+  }
+
+  .delivery__button {
+    display: flex;
+    justify-content: end;
+    margin-right: 250px;
+    margin-top: 48px;
+  }
+
+  .button--light {
+    
+    &:hover {
+     color:  #E01F3D;
+    }
+  }

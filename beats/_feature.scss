@@ -1,0 +1,16 @@
+.feature {
+  display: flex;
+}
+
+
+.feature__icon {
+  width: 17px;
+  height: 29px;
+  margin-right: 40px;
+}
+
+.feature__text {
+  font-family: 'Play';
+  color: $black;
+  max-width: 114px;
+}

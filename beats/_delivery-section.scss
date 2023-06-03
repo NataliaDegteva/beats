@@ -1,0 +1,16 @@
+.delivery-section {
+  background:#181818;
+  position: relative;
+
+  &:after {
+    content: url("./images/Polygon2.png");
+    position: absolute;
+    right: 150px;
+    top: -22px;
+  }
+}
+
+.delivery-title {
+  color: #fff;
+  margin-bottom: 46px;
+}
