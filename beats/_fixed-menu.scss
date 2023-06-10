@@ -7,22 +7,27 @@
 .fixed-menu__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .fixed-menu__item {
-  margin-bottom: 7px;
+  margin-bottom: 0.438rem;
   
   &--active {
     border-radius: 50%;
     border: 2px solid #E01F3D;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
 }
 
 
 .fixed-menu__link {
-  width: 19px;
-  height: 19px;
+  width: 1.188rem;
+  height: 1.188rem;
   border-radius: 50%;
   border: 1px solid transparent;
   display: block;

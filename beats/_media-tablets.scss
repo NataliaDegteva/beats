@@ -1,0 +1,129 @@
+//@mixin tablets {
+  //@media screen and (max-width: $tablets) {
+    //@content;
+  //}
+//}
+
+//@mixin phones {
+ // @media screen and (max-width: $phones) {
+  //  @content;
+  //}
+//}
+
+@media (max-width:768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .fixed-menu__list {
+    display: none;
+  }
+
+  .header__phones-number {
+    display: none;
+  }
+
+
+  .features {
+    display: none;
+  }
+
+  .preview {
+    background: none;
+  }
+
+  .preview__title-section {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:before {
+      content: url(./images/main.png);
+    }
+  }
+
+  .benefits-section:before {
+    content:""
+  }
+  .benefits__item {
+    padding: 0;
+
+  }
+
+  .benefits__item:before {
+    content: "";
+  }
+
+  .benefits__section:after {
+    content: url(./images/Rectangle.png);
+    position: absolute;
+    right: 3.37rem;
+    top: -1.375rem;
+  }
+
+  .headline__subtitle {
+    padding: 0 12%;
+  }
+
+.feedback__display-inner {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.feedback__avatar {
+  width: 8.125rem;
+  height: 8.125rem;
+}
+
+.feedback__text {
+  width: 100%;
+}
+.form {
+  flex-direction: column;
+  padding: 0 18%;
+}
+
+.form__row {
+  margin-bottom: 0.875rem;
+}
+
+.form__controls {
+  flex-wrap: nowrap;
+}
+
+.form__col:last-child {
+  margin-right: 0;}
+
+  .form__input {
+    height: 1.875rem;
+  }
+
+  .form__input--textarea {
+    width: 93%;
+    height: 5.125rem;
+  }
+
+  .form__buttons{
+    justify-content: space-between;
+  }
+  .preview__title-desc {
+    padding: 0 25%;}
+
+    .contacts {
+      margin-left: 0;
+    }
+
+    .contacts__address {
+      color: #E01F3D;
+    }
+}
+

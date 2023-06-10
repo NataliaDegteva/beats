@@ -8,6 +8,11 @@ $gray: #666666;
 $red: #E01F3D;
 $black: #292929;
 
+//breakpoints 
+
+$tablets: 768px;
+$phones: 480px;
+
 //normalize 
 
 @import  "./normalize.css";
@@ -51,3 +56,15 @@ $black: #292929;
 @import "./radio";
 
 @import "./fixed-menu";
+
+@import "./hamburger";
+
+@import "./map";
+
+@import "./contacts.scss";
+
+@import "./socials";
+
+@import "./media-tablets";
+
+@import "./media-phones";

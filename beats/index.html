@@ -41,13 +41,19 @@
                           </li>
             </ul>
           </nav>
-          <a href="tel:+78009039090" class="phones__number">
-          <span class="phone-number__icon">
-            <img src="./images/phone.svg" alt="Phone" class="phone-number__icon">
-          </span>
-          <span class="phone-number__text">8 800 903 90 90</span>
+          <a href="tel:+78009039090" class="phones__number header__phones-number">
+          <span class="phones__number-icon">
+            <img src="./images/phone.svg" alt="Phone" class="phones__number-img"></span>
+          <span class="phones__number-text">8 800 903 90 90</span>
           </a>
         </header>
+        <a href="#" class="hamburger">
+          <span class="hamburger__plank"></span>
+          <span class="hamburger__plank"></span>
+          <span class="hamburger__plank"></span>
+        </a>
+
+
         <div class="preview__title-section">
           <h1 class="preview__main-title">Беспроводные наушники Beats Solo 3</h1>
           <div class="preview__title-desc">Встречайте новую версию наушников 
@@ -184,11 +190,12 @@
     <form class="form">
       <div class="form__col">
       <div class="form__row">
-        <label class="form__block form__block--name">
+        <label class="form__block">
         <div class="form__title">Имя</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input"></label>
+       <label class="form__block">
         <div class="form__title">Телефон</div>
-        <input type="text" class="form__input">
+     <input type="text" class="form__input">
         </label>
       </div>
       <div class="form__row">
@@ -198,13 +205,19 @@
         </label>
       </div>
       <div class="form__row">
-        <label class="form__block form__block--address">
+        <label class="form__block">
         <div class="form__title">Дом</div>
         <input type="text" class="form__input">
+      </label>
+       <label class="form__block">
         <div class="form__title">Корпус</div>
         <input type="text" class="form__input">
+      </label>
+       <label class="form__block">
         <div class="form__title">Квартира</div>
         <input type="text" class="form__input">
+      </label>
+       <label class="form__block">
         <div class="form__title">Этаж</div>
         <input type="text" class="form__input">
         </label>
@@ -225,7 +238,7 @@
               Потребуется сдача
             </div>
           </label>
-          <label class="radio">
+          <label class="radio radio--pay">
             <input type="radio" name="option"  class="radio__elem">
             <div class="radio__visible"></div>
             <div class="radio__title">
@@ -242,14 +255,75 @@
             </div>
           </label>
         </div>
+        <div class="form__buttons">
+          <button class="button button--dark" type="submit">Заказать</button>
+          <button class="button button--light" type="reset">Очистить</button>
+          </div>
       </div>
     </form>
-    <div class="delivery__button">
-    <button class="button button--dark">Заказать</button>
-    <button class="button button--light">Очистить</button>
-    </div>
-    </div>
+       </div>
    </section>
+   <footer class="footer">
+    <section class="map-section">
+      <div class="map">
+        <img src="./images/map.png" alt="" class="map__img">
+      </div>
+    </section>
+      <section class="footer-section">
+      <div class="container footer__container">
+        <address class="contacts">
+        <div class="contacts__address">
+          Москва, ул.Новый Арбат, д.31/12
+        </div>
+        <a href="tel:+78009039090" class="phones__number footer__phones-number">
+          <span class="phones__number-icon">
+            <img src="./images/phone.svg" alt="Phone" class="phones__number-img"></span>
+          <span class="phones__number-text">8 800 903 90 90</span>
+          </a>
+        </address>
+        <div class="socials">
+          <ul class="socials__list">
+            <li class="socials__item socials__item--vk">
+              <a href="#" class="socials__link">
+                <!-- <img src="./images/vk.svg" alt="" class="socials__img"> -->
+        
+                <svg class="socials__img">
+                  <use xlink:href="./sprites.svg#vk"></use>
+              </svg>           
+                  
+              </a>
+            </li>
+            <li class="socials__item socials__item--fb">
+              <a href="#" class="socials__link">
+                <!-- <img src="./images/fb.svg" alt="" class="socials__img social__img--fb"> -->
+                <svg class="socials__img">
+                  <use xlink:href="./sprites.svg#fb"></use>
+              </svg>  
+                  
+              </a>
+            </li>
+            <li class="socials__item socials__item--inst">
+              <a href="#" class="socials__link">
+                <!-- <img src="./images/inst.svg" alt="" class="socials__img"> -->
+                <svg class="socials__img">
+                  <use xlink:href="./sprites.svg#inst"></use>
+              </svg>  
+      
+              </a>
+            </li>
+            <li class="socials__item socials__item--tg">
+              <a href="#" class="socials__link">
+                <!-- <img src="./images/tg.svg" alt="" class="socials__img"> -->
+                <svg class="socials__img">
+                  <use xlink:href="./sprite-tg.svg#tg"></use>
+              </svg> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+   </footer>
     </div>
   </div>
   <nav class="fixed-menu">
@@ -285,3 +359,5 @@
   </nav>
 </body>
 </html>
+
+

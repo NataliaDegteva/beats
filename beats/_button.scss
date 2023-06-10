@@ -1,8 +1,8 @@
 .button {
-  font-style: 16px;
+  font-size: 16px;
   color: #fff;
-  padding: 18px 41px;
-  border-radius: 100px;
+  padding: 1.125rem 2.56rem;
+  border-radius: 6.25rem;
   line-height: 1;
   cursor: pointer;
 
@@ -17,11 +17,11 @@
     }
   }
 
-  .delivery__button {
+  .form__buttons {
     display: flex;
     justify-content: end;
-    margin-right: 250px;
-    margin-top: 48px;
+    margin-right: 15.625rem;
+    margin-top: 3rem;
   }
 
   .button--light {

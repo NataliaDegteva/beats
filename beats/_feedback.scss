@@ -1,21 +1,21 @@
 .feedback__display {
   background: #F8FAF9;
-  padding: 42px;
-  margin-bottom: 57px;
+  padding: 2.625rem;
+  margin-bottom: 3.562rem;
   overflow: hidden;
   position: relative;
 
   &::before {
     content:"";
     display: block;
-    width: 83px;
-    height: 83px;
+    width: 5.187rem;
+    height: 5.187rem;
     background: #fff;
     border-radius: 50%;
     position: absolute;
     left: 50%;
   transform: translateX(-50%);
-  top: -54px;
+  top: -3.375rem;
   }
 }
 
@@ -24,8 +24,8 @@
 }
 
 .feedback__avatar {
-  width: 253px;
-  height: 260px;
+  width: 15.812rem;
+  height: 16.25rem;
 }
 
 .feedback__avatar-img {
@@ -36,16 +36,16 @@
 
 .feedback__content {
   flex: 1;
-  margin-left: 40px;
+  margin-left: 2.5rem;
+  margin-top: 1.562rem;
 }
 
 .feedback__title {
-  font-size: 24px;
-  margin-bottom: 27px;
-  margin-top: 25px;
+  font-size: 1.5rem;
+  margin-bottom: 1.688rem;
 }
 .feedback__text {
-  margin-bottom: 38px;
+  margin-bottom: 2.375rem;
   color: $gray;
   width: 61%;
 }

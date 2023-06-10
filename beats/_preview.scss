@@ -2,8 +2,8 @@
   background: url(./images/main.png) left 78% center no-repeat;
   background-color:  #F5F5F5;
   height: 100vh;
-  min-height: 650px;
-  padding: 24px 0 70px;
+  min-height: 40.625rem;
+  padding: 1.5rem 0 4.375rem;
 }
 
 .preview__container {
@@ -17,17 +17,17 @@
   font-family: $play;
   font-size: 48px;
   line-height: 1.1;
-  margin-bottom: 15px;
+  margin-bottom: 0.937rem;
   text-transform: uppercase;
 }
 
 .preview__title-desc {
   font-family: $play;
-  font-style: 21px;
-  margin-bottom: 36px;
+  font-size: 21px;
+  margin-bottom: 2.25rem;
   padding-right: 25%;
 }
 
 .preview__title-section {
-  width: 31%;
+  width: 36%;
 }

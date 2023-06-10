@@ -9,7 +9,7 @@
 
 .form__col {
   flex: 1;
-  margin-right: 27px;
+  margin-right: 1.69rem;
 
   &:last-child {
     margin-right: 0;
@@ -18,31 +18,24 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 36px;
+  margin-bottom: 2.25rem;
 
 }
 
 .form__block {
   flex: 1;
-  margin-right: 17px;
+  margin-right: 1.06rem;
 
   &:last-child {
     margin-right: 0;
   }
 
-  &--name {
-    column-count: 2;
-  }
-
-  &--address {
-    column-count: 4;
-  }
 }
 
 
 .form__input {
   width: 100%;
-  padding: 20px 12px;
+  padding: 1.25rem 0.75rem;
 border: 3px solid transparent;
 border-radius: 4px;
 
@@ -52,7 +45,7 @@ border-radius: 4px;
 }
 
 &--textarea {
-  height: 152px;
+  height: 11.56rem;
   resize: none;
 }
 }
@@ -61,12 +54,16 @@ border-radius: 4px;
   color:#fff;
 }
 
+.radio--pay {
+  margin: 0;
+}
+
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 19px;
+  margin-bottom: 1.06rem;
 }
 
 .form__input--textarea {
-  margin-bottom: 42px;
+  margin-bottom: 0.625rem;
 }
