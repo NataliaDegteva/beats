@@ -33,4 +33,11 @@
 .benefit__desc {
   font-family: $play;
   color: $gray;
+}  
+
+.benefits__item {
+
+  @include phones {
+    margin-bottom: 1.5rem;
+  }
 }

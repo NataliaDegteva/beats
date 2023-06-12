@@ -38,6 +38,10 @@
   flex: 1;
   margin-left: 2.5rem;
   margin-top: 1.562rem;
+
+ /* @include phones {
+    margin-left: 0;
+  }*/
 }
 
 .feedback__title {

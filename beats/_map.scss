@@ -1,7 +1,20 @@
 .map__img {
   width: 100%;
+  height: 100%;
 }
 
-.map__section {
+.map-section {
   position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
 }

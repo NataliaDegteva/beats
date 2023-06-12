@@ -22,6 +22,10 @@
     justify-content: end;
     margin-right: 15.625rem;
     margin-top: 3rem;
+
+    @include tablets {
+      margin-right: 0;
+    }
   }
 
   .button--light {
