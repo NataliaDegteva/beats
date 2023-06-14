@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $baseFontSize;
+
+ @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+body {
+  margin: 0;
+  font-size: $baseFontSize;
+  font-family: $play;
+
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+a 
+{text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  padding: 0;
+  outline: none;
+border: 1px solid transparent;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.container {
+  width: 95%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+min-height: 100%;
+overflow: hidden;
+}

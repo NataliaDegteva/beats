@@ -1,0 +1,106 @@
+.form {
+  display: flex;
+  cursor: pointer;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.form__title {
+  color:#fff;
+}
+
+.form__col {
+  flex: 1;
+  margin-right: 1.69rem;
+
+  &:last-child {
+    margin-right: 0;
+    @include tablets {
+    
+        margin-right: 0;
+    }
+  }
+
+  @include tablets {
+    margin-right: 0;
+  }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 2.25rem;
+
+  @include tablets {
+    margin-bottom: 0.875rem;
+  }
+
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 1.06rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+
+.form__input {
+  width: 100%;
+  padding: 1.25rem 0.75rem;
+border: 3px solid transparent;
+border-radius: 4px;
+
+@include tablets {
+  height: 1.875rem;
+}
+
+&:focus {
+  border-color: $red;
+  outline: none;
+}
+
+&--textarea {
+  height: 11.56rem;
+  resize: none;
+
+  @include tablets {
+    height: 5.125rem;
+  }
+}
+}
+
+.radio__title {
+  color:#fff;
+}
+
+.radio--pay {
+  margin: 0;
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.06rem;
+
+  @include tablets {
+    flex-wrap: nowrap;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.form__input--textarea {
+  margin-bottom: 0.625rem;
+}

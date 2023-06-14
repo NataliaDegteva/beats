@@ -1,0 +1,40 @@
+
+.socials__item {
+ width: 1.875rem;
+ height: 1.875rem;
+ border-radius: 50%;
+ position: relative;
+ margin-right: 10px;
+ &
+ :last-child {
+  margin: 0;
+
+  &:hover {
+    cursor: pointer;
+   }
+}
+}
+
+.socials {
+display: flex;
+justify-content: end;
+flex-wrap: nowrap;
+
+@include phones {
+  width: 100%;
+}
+}
+
+.socials__img {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.socials__list {
+  
+  @include phones {
+    margin-top: 8%;
+    margin-right: 25%;
+  }
+}

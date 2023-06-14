@@ -1,0 +1,29 @@
+.benefits-section {
+  position: relative;
+
+  &::before {
+    content: url("./images/triangle.png");
+    position: absolute;
+    bottom: -1rem;
+    left: 16.25rem;
+
+    @include tablets {
+      content:""
+    }
+  }
+
+  &:after {
+    content: url("./images/Rectangle.png");
+    position: absolute;
+    right: 9.37rem;
+    top: -1.375rem;
+
+    @include tablets {
+      right: 3.37rem;
+  }
+
+  @include phones {
+    right: -5.37rem;
+  }
+}
+}

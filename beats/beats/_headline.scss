@@ -1,0 +1,27 @@
+.headline {
+  text-align: center;
+  margin-bottom: 3.875rem;
+}
+
+.headline__title {
+  margin-bottom: 1.125rem;
+  color: $black;
+  font-family: $play;
+  margin-bottom:0.438rem;
+}
+
+.headline__subtitle {
+  color: $black;
+  font-family: $play;
+  color: $gray;
+  padding: 0 26%;
+
+  @include tablets {
+    padding: 0 12%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+
+}

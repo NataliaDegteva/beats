@@ -1,0 +1,37 @@
+.button {
+  font-size: 16px;
+  color: #fff;
+  padding: 1.125rem 2.56rem;
+  border-radius: 6.25rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &--dark {
+    background: $red;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+      background: #CA1B36;
+    }
+    }
+  }
+
+  .form__buttons {
+    display: flex;
+    justify-content: end;
+    margin-right: 15.625rem;
+    margin-top: 3rem;
+
+    @include tablets {
+     
+      justify-content: space-between;
+    }
+  }
+
+  .button--light {
+    
+    &:hover {
+     color:  #E01F3D;
+    }
+  }

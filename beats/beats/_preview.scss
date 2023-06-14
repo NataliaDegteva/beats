@@ -1,0 +1,63 @@
+.preview {
+  background: url(./images/main.png) left 78% center no-repeat;
+  background-color:  #F5F5F5;
+  height: 100vh;
+  min-height: 40.625rem;
+  padding: 1.5rem 0 4.375rem;
+
+  @include tablets {
+    background-image: none;
+  }
+
+  @include phones {
+    margin-bottom: 5.8125rem;
+  }
+}
+
+.preview__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.preview__main-title {
+  font-family: $play;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 0.937rem;
+  text-transform: uppercase;
+}
+
+.preview__title-desc {
+  font-family: $play;
+  font-size: 21px;
+  margin-bottom: 2.25rem;
+  padding-right: 25%;
+
+  @include tablets {
+    padding: 0 25%;
+  }
+
+  @include phones {
+    padding: 0 4%;
+  }
+}
+
+.preview__title-section {
+  width: 36%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:before {
+      content: url(./images/main.png);
+    }
+  }
+}
