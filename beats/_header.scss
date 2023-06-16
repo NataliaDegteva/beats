@@ -7,6 +7,10 @@
 .menu {
   margin: 0 30px;
 
+ @include tablets {
+    display: none;
+
+ }
 }
 .menu__list {
   display: flex;
@@ -46,5 +50,11 @@ flex-shrink: 0;
 
 .phones__number-text {
   white-space: nowrap;
+}
+
+.header__phones-number {
+  @include tablets {
+    display: none;
+  }
 }
 

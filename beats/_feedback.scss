@@ -5,6 +5,10 @@
   overflow: hidden;
   position: relative;
 
+  @include phones {
+    margin-bottom: 2.75rem;
+  }
+
   &::before {
     content:"";
     display: block;
@@ -21,11 +25,22 @@
 
 .feedback__display-inner {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .feedback__avatar {
   width: 15.812rem;
   height: 16.25rem;
+
+  @include tablets {
+    width: 8.125rem;
+    height: 8.125rem;
+  }
 }
 
 .feedback__avatar-img {
@@ -39,9 +54,6 @@
   margin-left: 2.5rem;
   margin-top: 1.562rem;
 
- /* @include phones {
-    margin-left: 0;
-  }*/
 }
 
 .feedback__title {
@@ -52,6 +64,10 @@
   margin-bottom: 2.375rem;
   color: $gray;
   width: 61%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .feedback__autor {

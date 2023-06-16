@@ -1,5 +1,10 @@
 .features {
   display: flex;
+
+  @include tablets {
+    display: none;
+  }
+  
 }
 
 .features__item {

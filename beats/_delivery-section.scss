@@ -9,6 +9,10 @@
     position: absolute;
     right: 9.375rem;
     top: -1.375rem;
+
+    @include phones {
+      content: "";
+    }
   }
 }
 

@@ -21,6 +21,8 @@ $phones: 480px;
 
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap");
 
+@import "./mixins";
+
 @import "./base";
 
 @import "./preview";
@@ -61,10 +63,9 @@ $phones: 480px;
 
 @import "./map";
 
-@import "./contacts.scss";
-
 @import "./socials";
 
-@import "./media-tablets";
+@import "./contacts.scss";
 
-@import "./media-phones";
+@import "./product";
+

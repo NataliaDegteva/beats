@@ -8,6 +8,10 @@
   position: fixed;
   left:90%;
   top: 5%;
+
+  @include tablets {
+    display: inline-flex;
+  }
 }
 
 .hamburger__plank {
@@ -19,5 +23,20 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.hamburger--active {
+  .hamburger__plank {
+    &:nth-child(1) {
+      opacity: 0;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(45deg),  translateY(-8px), translateX(5px);
+    }
   }
 }

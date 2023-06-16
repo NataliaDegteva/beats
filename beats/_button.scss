@@ -24,7 +24,8 @@
     margin-top: 3rem;
 
     @include tablets {
-      margin-right: 0;
+     
+      justify-content: space-between;
     }
   }
 

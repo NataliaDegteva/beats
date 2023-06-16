@@ -1,0 +1,114 @@
+.product__headphones {
+  display: flex;
+  align-items: center;
+}
+
+.product__slider {
+  display: flex;
+ justify-content: space-between ;
+ position: absolute;
+ top: 50%;
+ width: 100%;
+}
+
+.product__slider-arrow--left {
+  transform: rotate(180deg);
+}
+
+
+
+.product__image {
+  margin-right: 3.625rem;
+}
+.product__feature {
+  position: relative;
+  width: 5.625rem;
+  height: 5.65rem;
+background: #9A9A9A;
+border-radius: 4px;
+margin-bottom: 1.65rem;
+}
+
+.product__feature-list {
+  display: flex;
+  flex-direction: column;
+  width: 273px;
+height: 294px;
+background: rgba(255, 255, 255, 0.8);
+box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+backdrop-filter: blur(20px);
+border-radius: 4px;
+position: absolute;
+    top: 0%;
+    left: 64%;
+   /* opacity: 0;*/
+
+}
+ .product__feature-item {
+  display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.75rem;
+  
+    &:nth-child(1) {
+      margin-top: 1.75rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+ }
+
+.product__feature-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.product__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: $black;
+
+}
+
+.product__text {
+  width: 88%;
+  color: $gray;
+  margin-bottom: 1.75rem;
+}
+
+.product__info {
+  display: flex;
+  margin-bottom: 1.5rem;
+  
+}
+
+.product__info-charging {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5.375rem;
+}
+
+.product__info-weight {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__info-parameter {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ .product__info-text{
+color: $gray;
+}
+
+.product__order {
+  display: flex;
+}
+
+.product__price {
+  font-size: 36px;
+  margin-right: 1.23rem;
+}
