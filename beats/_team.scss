@@ -1,0 +1,50 @@
+.team__list {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.team__item {
+  margin-right: 1.25rem;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.team__avatar {
+  margin-bottom: 1.25rem;
+}
+
+.team__link {
+  font-size: 18px;
+  font-weight: 700;
+
+  &:after {
+    content: url(./images/треуг.svg);
+    margin-left: 0.25rem;
+   
+  }
+}
+
+.team__info {
+  margin-top: 0.75rem;
+}
+
+.team__info-text {
+  margin-top: 0.25rem;
+  color: &gray;
+}
+
+.team__content {
+  overflow: hidden;
+  height: 0;
+  transition: .5s;
+}
+
+.team__content-wrapper {
+  display: flex;
+}

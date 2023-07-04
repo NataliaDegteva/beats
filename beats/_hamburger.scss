@@ -1,5 +1,5 @@
 .hamburger {
-  width: 26px;
+  /*width: 26px;
   height: 20px;
   display: inline-flex;
   flex-direction: column;
@@ -11,6 +11,20 @@
 
   @include tablets {
     display: inline-flex;
+  }*/
+
+  position: fixed; 
+  top:20px;
+  right: 10%;
+  width: 26px;
+  height: 20px;
+  cursor:pointer;
+  z-index: 15;
+  transition:all .4s;
+
+
+  @include tablets {
+    
   }
 }
 
@@ -20,23 +34,17 @@
   height: 4px;
   border-radius: 20px;
   margin-bottom: 3px;
+  transition: all .5s;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:nth-child(2){
+    top:50%;
+    transform:translateY(-50%);
+  }
+  
+  &:nth-child(3){
+    bottom:0;
+    top:initial;
   }
 }
 
-.hamburger--active {
-  .hamburger__plank {
-    &:nth-child(1) {
-      opacity: 0;
-    }
-    &:nth-child(2) {
-      transform: rotate(45deg);
-    }
 
-    &:nth-child(3) {
-      transform: rotate(45deg),  translateY(-8px), translateX(5px);
-    }
-  }
-}

@@ -1,6 +1,22 @@
 .product__headphones {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.product {
+  position: relative;
+}
+
+.product:before {
+  content: url(./images/Rectangle\ 13.svg);
+    position: absolute;
+    right: 7.375rem;
+    bottom: -5.375rem;
 }
 
 .product__slider {
@@ -9,25 +25,57 @@
  position: absolute;
  top: 50%;
  width: 100%;
+
+ @include tablets {
+  top: 25%;
+ }
 }
 
 .product__slider-arrow--left {
   transform: rotate(180deg);
 }
 
+a.product__link {
+  width: 5.625rem;
+  height: 5.625rem;
+background: #9A9A9A;
+border-radius: 4px;
+display: inline-block;
+position: relative;
 
+@include tablets {
+  display: none;
+}
+}
 
 .product__image {
   margin-right: 3.625rem;
 }
+
 .product__feature {
   position: relative;
-  width: 5.625rem;
-  height: 5.65rem;
-background: #9A9A9A;
-border-radius: 4px;
-margin-bottom: 1.65rem;
+  display: inline-block;
+  margin-bottom: 1.65rem;
 }
+
+.product__feature-info {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+ opacity: 0;
+}
+
+/*.product__feature-info:before {
+  content: "Heoooooo";
+  color: red;
+  display: block;
+  height: 300px;
+  left: -79px;
+  right: 0;
+  top: 35px;
+  position: absolute;
+}*/
+
 
 .product__feature-list {
   display: flex;
@@ -38,12 +86,8 @@ background: rgba(255, 255, 255, 0.8);
 box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
 backdrop-filter: blur(20px);
 border-radius: 4px;
-position: absolute;
-    top: 0%;
-    left: 64%;
-   /* opacity: 0;*/
-
 }
+
  .product__feature-item {
   display: flex;
     justify-content: space-around;
@@ -64,11 +108,21 @@ position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+a.product__link:hover + .product__feature-info {
+  opacity: 1;
+}
+
+
 .product__title {
   font-size: 36px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   color: $black;
+
+  @include tablets {
+    font-size: 28px;
+  }
 
 }
 
@@ -76,11 +130,19 @@ position: absolute;
   width: 88%;
   color: $gray;
   margin-bottom: 1.75rem;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .product__info {
   display: flex;
   margin-bottom: 1.5rem;
+
+  @include tablets {
+    justify-content: center;
+  }
   
 }
 
@@ -88,11 +150,19 @@ position: absolute;
   display: flex;
   flex-direction: column;
   margin-right: 5.375rem;
+
+  @include phones {
+    align-items: baseline;
+  }
 }
 
 .product__info-weight {
   display: flex;
   flex-direction: column;
+  
+  @include phones {
+    align-items: baseline;
+  }
 }
 
 .product__info-parameter {
@@ -106,9 +176,21 @@ color: $gray;
 
 .product__order {
   display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .product__price {
   font-size: 36px;
   margin-right: 1.23rem;
+}
+
+.product__photo {
+  @include tablets {
+    width: 19.125rem;
+    height: 19.125rem;
+    margin-left: 3.75rem;
+  }
 }
