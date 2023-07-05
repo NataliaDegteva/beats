@@ -1,0 +1,103 @@
+
+
+.accordeon {
+  display: flex;
+
+
+	&__item{
+    margin-right: 1.25rem;
+    text-align: center;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&-active{
+			.accordeon__link{
+			
+        color: #000;
+
+				&:before{
+					transform:rotate(-180deg);
+				}
+			}
+
+			.accordeon__content{
+				height: 100%;
+			}
+			
+		}
+	}
+
+	&__link{
+		color: &black;
+		display: inline-flex;
+		align-items: center;
+		text-transform: uppercase;
+		color: &black;
+		font-weight: 700;
+    margin-bottom: 1rem;
+
+    &:after {
+      content: url(./images/треуг.svg);
+      margin-left: 0.25rem;
+
+    }
+	}
+
+	&__content{
+		overflow: hidden;
+		height: 0;
+		transition: .8s;
+
+		&-wrapp{
+			display: flex;
+
+		}
+	}
+
+	&__avatar{
+	
+    width: 222px;
+    height: 290px;
+		overflow:hidden;
+margin-bottom: 1rem;
+		margin-right: rem(20px);
+    background-color: white;
+
+		&-pic{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+	}
+
+	&__info{
+		font-size: 1rem;
+		font-weight: 700;
+ 
+
+
+		&-position{
+			margin-bottom:rem( 7px);
+      color: &black;
+		}
+
+		&-text{
+			font-weight: 300;
+			line-height: rem(24px);
+
+			p{
+        max-width: rem(220px);
+			}
+		}
+	}
+}
+
+.accordeon__info-text {
+ 
+    margin-top: 0.25rem;
+    color: &gray;
+
+}
