@@ -1,21 +1,3 @@
-let burger  = document.querySelector('#burger');
-let overlay = document.querySelector('.overlay');
-let body = document.querySelector('body');
-
-let links = document.querySelectorAll('.point__link'); [1,2,3,4,5,6,7]
-
-links.forEach(function(element){
-  element.addEventListener('click' , toggleMenu);
-})
-
-function toggleMenu(){
-  burger.classList.toggle('burger--active');
-  overlay.classList.toggle('overlay--active');
-  body.classList.toggle('body--active-overlay-point');
-}
-
-burger.addEventListener('click' , toggleMenu);
-
 
 
 
@@ -24,13 +6,13 @@ function accordionTeam() {
   const teamAccord = document.querySelector(".accordeon");
 
   teamAccord.addEventListener("click", function (event) {
-    event.preventDefault(); // скидываем стандартное состояние (что бы не кидало страницу вверх / или не перенаправляло на другую)
-    const target = event.target; // то на что мы клацнули
+    event.preventDefault(); 
+    const target = event.target;
    
     if (target.classList.contains("accordeon__link")) {
-      const worker = target.parentNode; // родитель нашей ссылки (li.accordeon__item)
-      const content = target.nextElementSibling; //  элемент который находится рядом с рашей ссылкой на уровне (accordeon__content)
-      const contentHeight = content.firstElementChild.clientHeight; // высота wrapper который лежит в accordeon__content
+      const worker = target.parentNode; 
+      const content = target.nextElementSibling; 
+      const contentHeight = content.firstElementChild.clientHeight;
 
       for (const iterator of workers) {
         if (iterator !== worker) {
@@ -57,7 +39,7 @@ let burger  = document.querySelector('.burger');
 let overlay = document.querySelector('.overlay');
 let body = document.querySelector('body');
 
-let links = document.querySelectorAll('.menu__link'); [1,2,3,4]
+let links = document.querySelectorAll('.menu__link'); [1,2,3,4,5,6,7]
 
 links.forEach(function(element){
   element.addEventListener('click' , toggleMenu);
@@ -70,5 +52,3 @@ function toggleMenu(){
 }
 
 burger.addEventListener('click' , toggleMenu);
-
-
