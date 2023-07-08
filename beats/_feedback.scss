@@ -82,3 +82,27 @@ display: flex;
 justify-content:center ;
 
 }
+
+
+
+.feedback__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.feedback__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.feedback__list {
+  position: relative;
+  min-height: 280px;
+}
+

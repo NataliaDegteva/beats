@@ -54,8 +54,7 @@
 
 }
 
-
-.form__input {
+.form__input { 
   width: 100%;
   padding: 1.25rem 0.75rem;
 border: 3px solid transparent;
@@ -79,6 +78,11 @@ border-radius: 4px;
   }
 }
 }
+.input-error {
+  border-color: red;
+  outline: invert;
+}
+
 
 .radio__title {
   color:#fff;
@@ -105,3 +109,4 @@ border-radius: 4px;
 .form__input--textarea {
   margin-bottom: 0.625rem;
 }
+

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beats</title>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./main.css">
 </head>
@@ -138,10 +141,9 @@
      </section>
      <section class="product">
       <div class="container product__container">
-        <div class="product__slider">
-          <a href="#" class="product__slider-link"><img src="./images/arrow.svg" alt="" class="product__slider-arrow product__slider-arrow--left"></a>
-            <a href="#" class="product__slider-link"><img src="./images/arrow.svg" alt="" class="product__slider-arrow"></a>
-        </div>
+        <div class="products__slider">
+        <ul class="product__list">
+          <li class="product__item">
         <div class="product__headphones">
         <div class="product__image">
           <img src="./images/prod.png" alt="Product" class="product__photo">
@@ -226,7 +228,100 @@
           </div>
         </div>
         </div>
+          </li>
+          <li class="product__item">
+            <div class="container product__container">
+              <div class="product__headphones">
+              <div class="product__image">
+                <img src="./images/headphonered.png" alt="Product" class="product__photo">
+              </div>
+              <div class="product__desc">
+              <div class="product__feature">
+                <a href="#" class="product__link">
+                <img src="./images/Group (1).svg" alt="" class="product__feature-image"></a>
+                <div class="product__feature-info">
+                  <ul class="product__feature-list">
+                    <li class="product__feature-item">
+                      <img src="./images/bluetooth.svg" alt="bluetooth" class="product__feature-icon">
+                      <div class="product__feature-text">
+                        Bluetooth
+                      </div>
+                      <div class="product__feature-property">
+                        4.0
+                      </div>
+                    </li>
+                    <li class="product__feature-item">
+                      <img src="./images/road 1.svg" alt="road" class="product__feature-icon">
+                      <div class="product__feature-text">
+                        Дальность 
+                      </div>
+                      <div class="product__feature-property">
+                       10 м
+                      </div>
+                    </li>
+                    <li class="product__feature-item">
+                      <img src="./images/charger 1.svg" alt="charger" class="product__feature-icon">
+                      <div class="product__feature-text">
+                       Зарядка
+                      </div>
+                      <div class="product__feature-property">
+                       2 ч
+                      </div>
+                    </li>
+                    <li class="product__feature-item">
+                      <img src="./images/kg 1.svg" alt="weight" class="product__feature-icon">
+                      <div class="product__feature-text">
+                        Вес
+                      </div>
+                      <div class="product__feature-property">
+                       215 гр
+                      </div>
+                    </li>
+                    <li class="product__feature-item">
+                      <img src="./images/patent 1.svg" alt="bluetooth" class="product__feature-icon">
+                      <div class="product__feature-text">
+                        Гарантия
+                      </div>
+                      <div class="product__feature-property">
+                       1 год
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <h2 class="product__title">beats solo pro. цвет «красный цитрус»
+                </h2>
+                <div class="product__text">
+                  <p>
+                    Беспроводные наушники Solo Pro помогают настроиться на творчество. Для этого предусмотрено два режима прослушивания: режим с активным шумоподавлением и Прозрачный режим.
+                  </p>
+                </div>
+                <div class="product__info">
+                  <div class="product__info-charging">
+                  <span class="product__info-text">Зарядка</span>
+                  <span class="product__info-parameter">2 часа</span>
+                </div>
+                <div class="product__info-weight">
+                  <span class="product__info-text">Вес</span>
+                  <span class="product__info-parameter">215 грамм</span>
+                </div>
+                </div>
+                <div class="product__order">
+                  <div class="product__price">
+                    <span class="product__price-cost">14900</span>
+                    <span class="product__price-currency">₽</span>
+                  </div>
+                  <button class="button button--dark">Заказать</button>
+                </div>
+              </div>
+          </li>
+    </ul>
+    <div class="product__slider">
+      <a href="#" class="product__slider-link"><img src="./images/arrow.svg" alt="" class="product__slider-arrow--left"></a>
+        <a href="#" class="product__slider-link"><img src="./images/arrow.svg" alt="" class="product__slider-arrow"></a>
+    </div>
       </div>
+    </div>
     </section>
     <section class="section team-section">
       <div class="container">
@@ -324,6 +419,8 @@
     <h2 class="section__title">Отзывы</h2>
     <div class="feedback"> 
       <div class="feedback__display">
+        <ul class="feedback__list">
+          <li class="feedback__item active" data-linked-with="one">
         <div class="feedback__display-inner">
           <div class="feedback__avatar">
             <img src="./images/avatar.png" alt="" class="feedback__avatar-img">
@@ -340,20 +437,55 @@
             </div>
           </article>
         </div>
+      </li>
+      <li class="feedback__item" data-linked-with="two">
+        <div class="feedback__display-inner">
+          <div class="feedback__avatar">
+            <img src="./images/вадим.png" alt="Avatar" class="feedback__avatar-img">
+          </div>
+          <article class="feedback__content">
+            <h3 class="feedback__title">Крутой дизайн</h3>
+            <div class="feedback__text">
+              <p>
+                После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт.     </p>
+            </div>
+            <div class="feedback__autor">
+             Вадим Грачев
+            </div>
+          </article>
+        </div>
+      </li>
+      <li class="feedback__item" data-linked-with="three">
+        <div class="feedback__display-inner">
+          <div class="feedback__avatar">
+            <img src="./images/мария.png" alt="Avatar" class="feedback__avatar-img">
+          </div>
+          <article class="feedback__content">
+            <h3 class="feedback__title">Надолго хватает заряда</h3>
+            <div class="feedback__text">
+              <p>Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.
+            </div>
+            <div class="feedback__autor">
+              Мария Орлова
+            </div>
+          </article>
+        </div>
+      </li>
+    </ul>    
       </div>
         <ul class="feedback__switcher">
           <li class="feedback__switcher-item interactive-avatar interactive-avatar--active">
-          <a href="#" class="interactive-avatar__link">
+          <a href="#" class="interactive-avatar__link" data-open = "one">
             <img src="./images/avatar.png" alt="Avatar" class="interactive-avatar__img">
           </a>
           </li>
           <li class="feedback__switcher-item interactive-avatar">
-            <a href="#" class="interactive-avatar__link">
+            <a href="#" class="interactive-avatar__link" data-open = "two">
               <img src="./images/Avatar1.png" alt="Avatar" class="interactive-avatar__img">
             </a>
             </li>
             <li class="feedback__switcher-item interactive-avatar">
-              <a href="#" class="interactive-avatar__link">
+              <a href="#" class="interactive-avatar__link" data-open="three">
                 <img src="./images/Avatar2.png" alt="Avatar" class="interactive-avatar__img">
               </a>
               </li>
@@ -365,38 +497,39 @@
     <div class="container delivery-container">
       <h2 class="section__title delivery-title">закажите доставку</h2>
     <form class="form">
+      <input type="hidden" name="to" value="degteva_n@list.ru">
       <div class="form__col">
       <div class="form__row">
         <label class="form__block">
         <div class="form__title">Имя</div>
-        <input type="text" class="form__input"></label>
+        <input type="text" class="form__input" name="name"></label>
        <label class="form__block">
         <div class="form__title">Телефон</div>
-     <input type="text" class="form__input">
+     <input type="text" class="form__input" name="phone">
         </label>
       </div>
       <div class="form__row">
         <label class="form__block">
         <div class="form__title">Улица</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input" name="street">
         </label>
       </div>
       <div class="form__row">
         <label class="form__block">
         <div class="form__title">Дом</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input" name="home">
       </label>
        <label class="form__block">
         <div class="form__title">Корпус</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input" name="part">
       </label>
        <label class="form__block">
         <div class="form__title">Квартира</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input"  name="flat">
       </label>
        <label class="form__block">
         <div class="form__title">Этаж</div>
-        <input type="text" class="form__input">
+        <input type="text" class="form__input" name="floor">
         </label>
       </div>
       </div>
@@ -404,7 +537,7 @@
         <div class="form__row">
           <label class="form__block">
             <div class="form__title">Комментарий</div>
-            <textarea class="form__input form__input--textarea"></textarea>
+            <textarea class="form__input form__input--textarea" name="comment"></textarea>
             </label>
         </div>
         <div class="form__controls">
@@ -438,7 +571,6 @@
           </div>
       </div>
     </form>
-       </div>
    </section>
    <section class="section map-section">
     <div class="map">
@@ -496,6 +628,17 @@
     </section>
     </div>
   </div>
+
+  <div class="modal" id="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Сообщение отправлено
+      </div>
+      <button class="button button--dark app-submit-button">Закрыть</button>
+    </div>
+  </div>
+     </div>
+
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--active">
@@ -581,7 +724,9 @@
       </nav>
     </div>
   </body>
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="./main.js"></script>
 </body>
 

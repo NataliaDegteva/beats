@@ -50,6 +50,7 @@ position: relative;
 
 .product__image {
   margin-right: 3.625rem;
+  padding: 1rem;
 }
 
 .product__feature {
@@ -192,5 +193,14 @@ color: $gray;
     width: 19.125rem;
     height: 19.125rem;
     margin-left: 3.75rem;
+  }
+}
+
+.product {
+  .bx-wrapper{
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  
   }
 }
