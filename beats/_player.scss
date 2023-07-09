@@ -1,0 +1,136 @@
+.player__wrapper {
+  display: flex;
+    justify-content: center;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  margin-left: 138px;
+    width: 663px;
+}
+
+.player__start {
+  border: 8px solid transparent;
+  border-radius: 3px;
+  width: 0;
+  height: 0;
+  border-left-color: #fff;
+}
+
+.player__playback {
+  background: #333;
+  height: 19%;
+  width: 75%;
+}
+
+.player__playback:before {
+ content: "";
+ height: 4px;
+ position: absolute;
+ top: 50%;
+ left: 58px;
+ right: 0;
+ background: gray;
+ display: block;
+ transform: translateY(-50%);
+ width: 69%;
+}
+
+.player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+
+  &.active .player__splash {
+    display: none;
+  }
+
+  &.paused {
+    .player__start {
+      width: 14px;
+      height: 22px;
+      border: none;
+
+      &:after  {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        top: 12px;
+        bottom: 0;
+        background: #fff;
+        height: 11px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3px;
+        top: 12px;
+        bottom: 0;
+        background: #fff;
+        height: 11px;
+      }
+      &:after {
+        left: 33px;
+      }
+
+      &:before {
+        left: 26px;
+      }
+      }
+    }
+  }
+
+
+.player__splash {
+  position: absolute;
+  width: 662px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 138px;
+  cursor: pointer;
+  background: url("./images/проигрыватель.png") center center/cover no-repeat;
+}
+
+.player__duration {
+  color:#fff;
+}
+
+.player__playback-button {
+  background: red;
+  border-radius: 50%;
+  border: none;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player__splash:after {
+  content: "";
+  border: 51px solid transparent;
+  border-radius: 8px;
+  width: 0;
+  height: 0;
+  border-left-color: #F8FAF9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

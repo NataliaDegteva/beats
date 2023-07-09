@@ -1,6 +1,7 @@
 .product__headphones {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 
   @include tablets {
     flex-direction: column;

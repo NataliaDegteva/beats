@@ -1,3 +1,97 @@
+const sections = $("section");
+const display = $(".maincontent");
+
+let inScroll = false;
+
+sections.first().addClass("active");
+
+const performTransition = sectionEq => {
+  if(inScroll === false) {
+    inScroll = true;
+     const position = sectionEq * -100;
+     
+     
+const currentSection = sections.eq(sectionEq);
+const menuTheme = currentSection.attr("data-sidemenu-theme");
+const sideMenu = $(".fixed-menu");
+
+/*if (menutheme ==="black") {
+  sideMenu.addClass("здесь должен быть псевдоэлемент");
+} else {
+  sideMenu.removeClass("здесь должен быть псевдоэлемент");
+}*/
+
+  display.css ( {
+    transform: `translateY(${position}%)`
+  });
+
+  sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+  setTimeout (() => {
+inScroll = false;
+sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active")
+
+
+  }, 1300);
+ }
+};
+
+
+const scrollViewport = direction => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index())
+
+  }
+  if (direction ==="prev" && prevSection.length) {
+    performTransition(prevSection.index())
+  }
+};
+$(window).on("wheel", e => {
+const deltaY = e.originalEvent.deltaY;
+
+if (deltaY > 0) {
+  scrollViewport("next");
+
+}
+if (deltaY<0) {
+  scrollViewport("prev");
+
+}
+});
+
+$(window).on("keydown", e => {
+
+  const tagName = e.target.tagName.toLowerCase();
+
+  if (tagName !== "input" && tagName !== "textarea") {
+
+  switch (e.keyCode) {
+    case 38: 
+    scrollViewport("prev")
+
+    break;
+
+    case 40:
+    scrollViewport("next")
+    break;
+  }
+}
+});
+
+$("[data-scroll-to]").click(e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const targ = $this.attr("data-scroll-to"); //д.б.таргет
+  const reqSection = $(`[data-section-id=${targ}]`);
+performTransition(reqSection.index());
+})
+
+
 
 
 
@@ -141,8 +235,7 @@ $(".form").submit((e) => {
         });
       },
       error: data => {
-        const message= data.responseJSON.message;
-        content.text(message);
+        content.text("Ошибка сервера");
         modal.addClass("error-modal");
         $.fancybox.open( {
           src: "#modal",
@@ -165,3 +258,216 @@ $(".app-submit-button").click(e=> {
 
   $.fancybox.close();
 });
+
+
+
+let myMap;
+const init = () => {
+ myMap = new ymaps.Map("map", {
+   center: [55.749486, 37.591485],
+   zoom: 14,
+   controls: [],
+ });
+ 
+ let coords = [
+     [55.752004, 37.576133],
+     [55.761720, 37.604592],
+     [55.756351, 37.622836],
+     [55.742580, 37.582269],
+   ],
+   myCollection = new ymaps.GeoObjectCollection({}, {
+     draggable: false,
+     iconLayout: 'default#image',
+     iconImageHref: './images/marker.svg',
+     iconImageSize: [46, 57],
+     iconImageOffset: [-35, -52]
+   });
+ 
+ for (let i = 0; i < coords.length; i++) {
+   myCollection.add(new ymaps.Placemark(coords[i]));
+ }
+ 
+ myMap.geoObjects.add(myCollection);
+ 
+ myMap.behaviors.disable('scrollZoom');
+};
+ 
+ymaps.ready(init);
+
+
+
+
+const mesureWidth =item => {
+  let reqItemWidth = 0;
+  const screenWidth = $(window).width();
+  const container = item.closest(".products-menu__list");
+ const titlesBlocks = container.find(".products-menu__title");
+const titlesWidth = titlesBlocks.width() * titlesBlocks.length;
+
+const textContainer = item.find(".products-menu__container");
+const paddingLeft = parseInt(textContainer.css("padding-left"));
+const paddingRight = parseInt(textContainer.css("padding-right"));
+
+const isMobile = window.matchMedia("(max-width: 768px").matches;
+if(isMobile) {
+ reqItemWidth = screenWidth - titlesWidth;
+}
+else {
+  reqItemWidth = 400;
+}
+
+return {
+  container: reqItemWidth,
+  textContainer: reqItemWidth - paddingLeft - paddingRight
+}
+};
+
+const closeEveryItemInContainer = (container) => {
+  const items = container.find(".products-menu__item");
+  const part = container.find(".products-menu__content"); //была переменная content
+  
+  items.removeClass("active");
+ part.width(0);
+};
+
+const openItem = (item) => {
+  const hiddenContent = item.find(".products-menu__content");
+  const reqWidth = mesureWidth(item);
+  const textBlock = item.find(".products-menu__container");
+  textBlock.width(reqWidth.textContainer);
+  item.addClass ("active");
+
+  hiddenContent.width(reqWidth.container);
+};
+
+
+
+$(".products-menu__title").on("click", (e) => {
+e.preventDefault();
+
+const $this = $(e.currentTarget);
+const item = $this.closest(".products-menu__item");
+const itemOpened = item.hasClass("active");
+const container = $this.closest(".products-menu__list");
+
+if(itemOpened) {
+closeEveryItemInContainer(container)
+} else {
+  closeEveryItemInContainer(container)
+  openItem(item);
+}
+});
+
+
+let player;
+const playerContainer = $(".player");
+ 
+let eventsInit = () => {
+ $(".player__start").click(e => {
+   e.preventDefault();
+ 
+   if (playerContainer.hasClass("paused")) {
+     player.pauseVideo();
+   } else {
+     player.playVideo();
+   }
+ });
+ 
+ $(".player__playback").click(e => {
+   const bar = $(e.currentTarget);
+   const clickedPosition = e.originalEvent.layerX;
+   const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+   const newPlaybackPositionSec =
+     (player.getDuration() / 100) * newButtonPositionPercent;
+ 
+   $(".player__playback-button").css({
+     left: `${newButtonPositionPercent}%`
+   });
+ 
+   player.seekTo(newPlaybackPositionSec);
+ });
+ 
+ $(".player__splash").click(e => {
+   player.playVideo();
+ })
+};
+ 
+const formatTime = timeSec => {
+ const roundTime = Math.round(timeSec);
+ 
+ const minutes = addZero(Math.floor(roundTime / 60));
+ const seconds = addZero(roundTime - minutes * 60);
+ 
+ function addZero(num) {
+   return num < 10 ? `0${num}` : num;
+ }
+ 
+ return `${minutes} : ${seconds}`;
+};
+ 
+const onPlayerReady = () => {
+ let interval;
+ const durationSec = player.getDuration();
+ 
+ $(".player__duration-estimate").text(formatTime(durationSec));
+ 
+ if (typeof interval !== "undefined") {
+   clearInterval(interval);
+ }
+ 
+ interval = setInterval(() => {
+   const completedSec = player.getCurrentTime();
+   const completedPercent = (completedSec / durationSec) * 100;
+ 
+   $(".player__playback-button").css({
+     left: `${completedPercent}%`
+   });
+ 
+   $(".player__duration-completed").text(formatTime(completedSec));
+ }, 1000);
+};
+ 
+const onPlayerStateChange = event => {
+ /*
+   -1 (воспроизведение видео не начато)
+   0 (воспроизведение видео завершено)
+   1 (воспроизведение)
+   2 (пауза)
+   3 (буферизация)
+   5 (видео подают реплики).
+ */
+ switch (event.data) {
+   case 1:
+     playerContainer.addClass("active");
+     playerContainer.addClass("paused");
+     break;
+ 
+   case 2:
+     playerContainer.removeClass("active");
+     playerContainer.removeClass("paused");
+     break;
+ }
+};
+ 
+function onYouTubeIframeAPIReady() {
+ player = new YT.Player("yt-player", {
+   height: "405",
+   width: "660",
+   videoId: "LXb3EKWsInQ",
+   events: {
+     onReady: onPlayerReady,
+     onStateChange: onPlayerStateChange
+   },
+   playerVars: {
+     controls: 0,
+     disablekb: 0,
+     showinfo: 0,
+     rel: 0,
+     autoplay: 0,
+     modestbranding: 0
+   }
+ });
+}
+ 
+eventsInit();
+ 
