@@ -299,10 +299,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin-right: 15.625rem;
   margin-top: 3rem;
 }
 @media screen and (max-width: 768px) {
@@ -973,6 +969,10 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+.fixed-menu__item--active .fixed-menu__link:before {
+  background: red;
+}
+
 .burger {
   display: none;
   position: fixed;
@@ -1556,6 +1556,12 @@ a.product__link:hover + .product__feature-info {
   content: url(./images/треуг.svg);
   margin-left: 0.25rem;
 }
+.accordeon .accordeon__link:focus:after {
+  content: url(./images/треуг.svg);
+  margin-left: 0.25rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .accordeon__content {
   overflow: hidden;
   height: 0;
@@ -1665,6 +1671,15 @@ a.product__link:hover + .product__feature-info {
   width: 100px;
   background: #333537;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .products-menu__text {
@@ -1683,10 +1698,9 @@ a.product__link:hover + .product__feature-info {
   margin-top: 22.7rem;
 }
 
-.products-menu__text--red {
+/*.products-menu__text--red {
   margin-top: 24rem;
-}
-
+}*/
 .products-menu__title--black {
   background: #151515;
 }
@@ -1765,6 +1779,7 @@ a.product__link:hover + .product__feature-info {
   background: #333;
   height: 19%;
   width: 75%;
+  position: relative;
 }
 
 .player__playback:before {
@@ -1772,13 +1787,12 @@ a.product__link:hover + .product__feature-info {
   height: 4px;
   position: absolute;
   top: 50%;
-  left: 58px;
   right: 0;
   background: gray;
   display: block;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 69%;
+  width: 100%;
 }
 
 .player {

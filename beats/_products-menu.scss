@@ -34,6 +34,9 @@
   width: 100px;
   background: #333537;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -49,9 +52,9 @@
   margin-top: 22.7rem;
 }
 
-.products-menu__text--red {
+/*.products-menu__text--red {
   margin-top: 24rem;
-}
+}*/
 
 .products-menu__title--black {
   background: #151515;

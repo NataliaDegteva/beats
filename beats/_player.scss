@@ -30,6 +30,8 @@
   background: #333;
   height: 19%;
   width: 75%;
+  position: relative;
+
 }
 
 .player__playback:before {
@@ -37,12 +39,11 @@
  height: 4px;
  position: absolute;
  top: 50%;
- left: 58px;
  right: 0;
  background: gray;
  display: block;
  transform: translateY(-50%);
- width: 69%;
+ width: 100%;
 }
 
 .player {

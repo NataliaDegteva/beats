@@ -58,3 +58,7 @@
     opacity: 1;
     
 }
+
+.fixed-menu__item--active .fixed-menu__link:before {
+  background: red;
+}
